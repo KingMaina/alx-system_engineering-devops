@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -laXmp --group-directories-first echo /n
