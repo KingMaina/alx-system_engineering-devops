@@ -1,0 +1,1 @@
+This repository contains various mini-projects on bash scripts for alx projects.
