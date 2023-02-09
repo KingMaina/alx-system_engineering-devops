@@ -1,0 +1,1 @@
+Repo about bash scripts on shell permissions 
