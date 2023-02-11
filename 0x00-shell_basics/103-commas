@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -laXmp --group-directories-first
+ls -lamp
