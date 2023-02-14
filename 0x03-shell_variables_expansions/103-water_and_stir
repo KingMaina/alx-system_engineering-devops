@@ -1,2 +1,2 @@
 #!/bin/bash
-echo bestchol#$((water#$WATER + stir#$STIR))
+printf -v result_bestchol '%X' "$(( 10#${WATER} + 16#${STIR} ))"; echo "${result_bestchol}"
