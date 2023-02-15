@@ -1,2 +1,2 @@
 #!/bin/bash
-tr ' ' '\n' sort | uniq -c | grep '^[[:space:]]*1' | cut -c 7-
+sort | uniq -u
