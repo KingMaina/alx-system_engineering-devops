@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | grep -n '' | tail -n +1 | head -n $(($(ls -1 | wc -l) / 2)) | cut -d: -f2
+paste - - | cut -f 1
