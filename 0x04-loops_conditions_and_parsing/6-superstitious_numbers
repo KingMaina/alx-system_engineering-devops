@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# A script that displays numbers from 1 to 20 with some bad luck
+
+count=1
+
+while (( count <= 20 ))
+do
+    echo $count
+    if [ $count == 4 ]
+    then
+        echo "bad luck from China"
+    elif [ $count == 9 ]
+    then
+        echo "bad luck from Japan"
+    elif [ $count == 17 ]
+    then
+        echo "bad luck from Italy"
+    fi
+    count=$(( count += 1 ))
+done
