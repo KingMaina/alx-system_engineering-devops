@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# A script that creates a file with its PID and reponds to various signals, deleting the created file after a SIGTERM
+FILE=/var/run/myscript.pid
+MSG_INFINITY="To infinity and beyond"
+MSG_SIGTERM="I hate the kill command"
+MSG_SIGINT="Y U no love me?!"
+
+echo $$ > $FILE
+trap 'echo $MSG_SIGINT' SIGINT
+if [ -f $FILE ]; then
+    trap 'rm -f $FILE; exit' SIGQUIT
+    trap 'echo $MSG_SIGTERM && rm -f $FILE; exit' SIGTERM
+fi
+while true; do
+    echo "$MSG_INFINITY"
+    sleep 2
+done
