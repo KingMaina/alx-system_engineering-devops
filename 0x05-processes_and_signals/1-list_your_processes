@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # A script that lists information about all processes
-
-ps -auxt
+ps -aux
