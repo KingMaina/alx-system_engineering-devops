@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A script that manages a background process
+PROCESS_FILE=/var/run/my_process.pid
+
+if [ $2 -ne  ]; then
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit
+fi

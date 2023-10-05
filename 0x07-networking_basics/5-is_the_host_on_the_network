@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# A script that pings a valid IP address from the script argument
+ARG_COUNT=1
+PING_COUNT=5
+EXIT_FAILURE_CODE=1
+
+if [ $# != $ARG_COUNT ]; then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    exit $EXIT_FAILURE_CODE
+fi
+ping -c $PING_COUNT "$1"

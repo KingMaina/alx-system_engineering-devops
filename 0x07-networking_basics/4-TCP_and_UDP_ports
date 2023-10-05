@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A script that displays network socket information including only listening sockets and the name of program and PID
+netstat -pl
