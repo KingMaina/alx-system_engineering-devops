@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A scipt that listens on port 98 o localhost
+
+PORT=98
+nc -l $PORT
