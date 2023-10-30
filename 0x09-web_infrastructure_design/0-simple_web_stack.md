@@ -2,7 +2,7 @@
 
 ## Diagram
 
-![Simple Web Stack](0-simple_web_stack.png)
+![Simple Web Stack](simple_web_stack.jpeg)
 
 ## Description
 
@@ -15,7 +15,7 @@ This diagram shows a simple web stack. It consists of a single server, a single 
 3. 1 application server
 4. 1 database server
 5. Application code
-6. 1 domain name (www.foobar.com)
+6. 1 domain name `www.foobar.com`
 
 ## Specifics
 
@@ -25,7 +25,7 @@ This diagram shows a simple web stack. It consists of a single server, a single 
 2. What is the role of the domain name?
     * A domain name is a human-readable name that is easy to remember and is used to identify a computer on the internet.
 
-3. What type of DNS record is www in www.foobar.com?
+3. What type of DNS record is www in `www.foobar.com`?
     * A DNS A record. It is a DNS record that maps a domain name to an IPv4 address. In this case, `www.foobar.com` could resolve to e.g `192.168.100.56`
 
 4. What is the role of the web server?

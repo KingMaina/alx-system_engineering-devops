@@ -2,9 +2,11 @@
 
 ## Learning Objectives
 
-* Draw a diagram showing various web infrastructure systems.
+* Draw diagrams showing various web infrastructure systems.
 
 ## Designs
+
+Explanations of the designs are in the corresponding `<0-file_name>.md` files.
 
 1. Simple web stack - [0-simple_web_stack](0-simple_web_stack)
 2. Distributed web infrastructure - [1-distributed_web_infrastructure](1-distributed_web_infrastructure)
