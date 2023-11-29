@@ -6,14 +6,14 @@ apt-get update
 apt-get -y install nginx
 
 # Configure nginx to serve custom html content
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/index.html
 
 # Configure nginx to redirect /redirect_me to another page
 sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 
 # Configure nginx to have a custom 404 page
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
-sed -i '/server_name _;/a error_page 404 /404.html;\nlocation = /404.html {\nroot /usr/share/nginx/html;\ninternal;\n}' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sed -i '/server_name _;/a error_page 404 /404.html;\nlocation = /404.html {\nroot var/www/html;\ninternal;\n}' /etc/nginx/sites-available/default
 
 # Start nginx
 service nginx restart

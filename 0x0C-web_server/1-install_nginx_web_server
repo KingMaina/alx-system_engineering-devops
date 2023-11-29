@@ -9,7 +9,7 @@ apt-get -y install nginx
 sed -i 's/8080 default_server/80 default_server/g' /etc/nginx/sites-available/default
 
 # Configure nginx to serve custom html content
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/index.html
 
 
 # Start nginx
