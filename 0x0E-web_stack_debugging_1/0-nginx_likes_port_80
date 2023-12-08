@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 # Script that fixes an nginx server to serve content from port 80
-apt-get update
-apt-get install -y curl
-rm /etc/nginx/sites-available/*
-rm /etc/nginx/sites-enabled/*
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo service nginx restart
-
+service nginx restart
