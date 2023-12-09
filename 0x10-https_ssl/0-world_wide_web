@@ -17,4 +17,3 @@ if [ -z "$2" ]; then
 else
   web_info "$1" "$2"
 fi
-
