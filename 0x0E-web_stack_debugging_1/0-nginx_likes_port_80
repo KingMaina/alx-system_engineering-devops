@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 # Script that fixes an nginx server to serve content from port 80
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+
+# Delete the default configuration
+rm -f /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default
 service nginx restart
