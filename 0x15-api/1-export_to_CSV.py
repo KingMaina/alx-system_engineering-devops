@@ -16,7 +16,7 @@ if __name__ == '__main__':
             URL, EMPLOYEE_ID)).json()
         USER_ID = user.get('id')
         with open('{}.csv'.format(USER_ID), 'w', encoding='utf-8') as f:
-            USER_NAME = user.get('name')
+            USER_NAME = user.get('username')
             writer = csv.writer(f, quoting=csv.QUOTE_ALL)
             for todo in user_todos:
                 STATUS = todo.get('completed')
