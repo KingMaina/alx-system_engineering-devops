@@ -1,6 +1,6 @@
 # Puppet script ot increase nginx 
 
-$nginx_ulimit = 4096
+$nginx_ulimit = 'ULIMIT="-n 65535"'
 
 package { 'nginx':
   ensure => installed,
@@ -8,7 +8,7 @@ package { 'nginx':
 
 file { '/etc/default/nginx':
   ensure  => present,
-  content => 'ULIMIT="-n 65535"',
+  content => $nginx_ulimit,
   notify  => Service['nginx']
 }
 

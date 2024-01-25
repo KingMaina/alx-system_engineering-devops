@@ -4,6 +4,22 @@
 Here, we are given an ubuntu server running and nginx server however ton performing a load test, there is a significant amount of failed requests.
 Our job is to come up with a puppet script that will be deployed to the server so as to configure the nginx  server to handle the high number of requests.
 
+## Requirements
+
+1. An ubuntu server. Here we use `Ubuntu 14.04 LTS`
+2. Puppet package installed `v3.4`
+3. Puppet-lint for linting puppet files `puppet-lint version 2.1.1
+
+### Install `puppet-lint`
+
+```bash
+apt-get install -y ruby
+```
+Then run:
+```bash
+gem install puppet-lint -v 2.1.1
+```
+
 ## Load test
 For starters we will run load test the server using attotal of 200 requests at a concurrency count  of 100 simultaneous connections.
 Run the following command using Apache Benchmark.
@@ -33,3 +49,12 @@ Our puppet script ensures the following:
 * Notify the nginx service daemon and restart the service.
 The script can be found [here](0-the_sky_is_the_limit_not.pp)
 
+## Apply puppet script
+Run:
+```bash
+puppet apply ./0-the_sky_is_the_limit_not.pp
+```
+Check if the nginx configuration's ULIMIT is the correct value
+```bash
+cat /etc/default/nginx # ULIMIT="-n 65535"
+```
